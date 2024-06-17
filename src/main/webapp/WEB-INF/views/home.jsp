@@ -8,5 +8,10 @@
 </head>
 <body>
 	<h1>안녕</h1>
+<%
+	Object obj = request.getAttribute("name");
+	out.println(obj);
+%>
+	<p>${name}</p>
 </body>
 </html>
