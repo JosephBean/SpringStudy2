@@ -42,7 +42,6 @@
 <%
 	Object obj = request.getAttribute("list");
 	Object dan = request.getAttribute("dan");
-// 	out.println(obj);
 	if(obj != null) {
 		List list = (List) obj;
 		for(int i = 0; i < list.size(); i++) {
@@ -57,7 +56,7 @@
 			List list2 = (List) obj2;
 			for(int j = 0; j < list2.size(); j++) {
 				Object obj3 = list2.get(j);
-%>    
+%>
 		      <div class="col-sm-4">
 		        <p class="text-bg-light"><%=obj3%></p>
 		      </div>
@@ -71,72 +70,6 @@
 		}
 	}
 %>
-<!--   <div class="container mt-3"> -->
-<!--     <h2 class="text-white text-center">2단</h2> -->
-<!--     <div class="row text-center mt-3 fs-3"> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">2 * 1 = 2</p> -->
-<!--       </div> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">2 * 2 = 4</p> -->
-<!--       </div> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">2 * 3 = 6</p> -->
-<!--       </div> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">2 * 4 = 8</p> -->
-<!--       </div> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">2 * 5 = 10</p> -->
-<!--       </div> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">2 * 6 = 12</p> -->
-<!--       </div> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">2 * 7 = 14</p> -->
-<!--       </div> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">2 * 8 = 16</p> -->
-<!--       </div> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">2 * 9 = 18</p> -->
-<!--       </div> -->
-<!--     </div> -->
-<!--   </div> -->
-
-<!--   <div class="container mt-3"> -->
-<!--     <h2 class="text-white text-center">3단</h2> -->
-<!--     <div class="row text-center mt-3 fs-3"> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">3 * 1 = 3</p> -->
-<!--       </div> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">3 * 2 = 6</p> -->
-<!--       </div> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">3 * 3 = 9</p> -->
-<!--       </div> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">3 * 4 = 12</p> -->
-<!--       </div> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">3 * 5 = 15</p> -->
-<!--       </div> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">3 * 6 = 18</p> -->
-<!--       </div> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">3 * 7 = 21</p> -->
-<!--       </div> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">3 * 8 = 24</p> -->
-<!--       </div> -->
-<!--       <div class="col-sm-4"> -->
-<!--         <p class="text-bg-light">3 * 9 = 27</p> -->
-<!--       </div> -->
-<!--     </div> -->
-<!--   </div> -->
-
 <!-- 반복 끝 -->
 </body>
 </html>
