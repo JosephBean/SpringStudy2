@@ -16,4 +16,11 @@
   	SELECT * FROM gugudan WHERE dan = #{dan}
   </select>
   
+  <select id="data" resultType="HashMap">
+  	SELECT * FROM gugudan 
+  	<if test="dan != 0">
+  		WHERE dan = #{dan}
+  	</if>
+  </select>
+  
 </mapper>
