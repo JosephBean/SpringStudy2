@@ -1,3 +1,4 @@
+<%@page import="java.util.HashMap"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -43,30 +44,38 @@
 	Object obj = request.getAttribute("list");
 	Object dan = request.getAttribute("dan");
 	
-	out.println(obj);
+// 	out.println(obj);
 	
-	obj = null;
+// 	obj = null;
 	if(obj != null) {
 		List list = (List) obj;
-		for(int i = 0; i < list.size(); i++) {
-			int d = Integer.parseInt( dan.toString() );
+		int d = Integer.parseInt( dan.toString() );
+		for(int i = 0; i < list.size(); i = i+9) {
 %>
   <div class="container mt-3">
-    <h2 class="text-white text-center"><%= d + i %>단</h2>
+    <h2 class="text-white text-center"><%= d++ %>단</h2>
     <div class="row text-center mt-3 fs-3">
 <%
-		Object obj2 = list.get(i);
-		if(obj2 != null) {
-			List list2 = (List) obj2;
-			for(int j = 0; j < list2.size(); j++) {
-				Object obj3 = list2.get(j);
+// 		Object obj2 = list.get(i);
+// 		out.println(obj2);
+// 		if(obj2 != null) {
+// 			List list2 = (List) obj2;
+			for(int j = 0; j < 9; j++) {
+				HashMap obj2 = (HashMap) list.get(i + j); // 0 ~ 8
+				// i = 0   j = 0   i + j = 0
+				// i = 0   j = 1   i + j = 1
+// 				Object obj3 = list2.get(j);
+				Object a = obj2.get("dan");
+				Object b = obj2.get("su");
+				int sum = Integer.parseInt(a.toString()) * Integer.parseInt(b.toString()); 
+				String str = a + " * " + b + " = " + sum;
 %>
 		      <div class="col-sm-4">
-		        <p class="text-bg-light"><%=obj3%></p>
+		        <p class="text-bg-light"><%=str%></p>
 		      </div>
 <%
 			}
-		}
+// 		}
 %>
     </div>
   </div>
