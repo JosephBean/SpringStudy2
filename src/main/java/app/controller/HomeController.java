@@ -1,10 +1,9 @@
 package app.controller;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -37,6 +36,16 @@ public class HomeController {
 	public String page2(Model model, HttpServletRequest req) {
 		hs.page2(model, pUtil.param(req));
 		return "page2";
+	}
+	
+	@Autowired
+	private SqlSession session;
+	
+	@GetMapping("/test")
+	public String test() {
+		int no = session.selectOne("sql.test");
+		System.out.println("no : " + no);
+		return "";
 	}
 	
 }
