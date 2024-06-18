@@ -8,4 +8,12 @@
   	select 1 as no
   </select>
   
+  <select id="all" resultType="HashMap">
+  	SELECT * FROM gugudan
+  </select>
+  
+  <select id="dan" resultType="HashMap">
+  	SELECT * FROM gugudan WHERE dan = #{dan}
+  </select>
+  
 </mapper>

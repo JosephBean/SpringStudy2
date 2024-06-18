@@ -3,18 +3,24 @@ package app.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
+import app.dao.HomeDao;
 import app.dto.ParamDTO;
 
 @Service
 public class HomeService {
 	
+	@Autowired
+	private HomeDao hDao;
+	
 	public void page2(Model model, ParamDTO pdto) 
 	{
 		int s = 1;
 		int d = 0;
+		List list = null;
 		if(pdto.isState()) 
 		{
 			Object param = pdto.getResultMap().get("dan");
@@ -24,7 +30,8 @@ public class HomeService {
 				switch (dan) 
 				{
 					case "A":
-						d = 10;
+//						d = 10;
+						list = hDao.gugudanAll();
 						break;
 					case "1":
 					case "2":
@@ -36,14 +43,19 @@ public class HomeService {
 					case "8":
 					case "9":
 						s = Integer.parseInt(dan);
-						d = s + 1;
+//						d = s + 1;
+						list = hDao.gugudanOne(s);
 						break;
 				}
-				data(model, s, d);
+//				data(model, s, d);
 			}
 		} else {
-			data(model, s, 10);
+//			data(model, s, 10);
+			list = hDao.gugudanAll();
 		}
+		
+		model.addAttribute("dan", s);
+		model.addAttribute("list", list);
 		
 	}
 	

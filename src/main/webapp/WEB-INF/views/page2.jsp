@@ -42,6 +42,10 @@
 <%
 	Object obj = request.getAttribute("list");
 	Object dan = request.getAttribute("dan");
+	
+	out.println(obj);
+	
+	obj = null;
 	if(obj != null) {
 		List list = (List) obj;
 		for(int i = 0; i < list.size(); i++) {
