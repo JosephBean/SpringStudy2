@@ -18,7 +18,7 @@ public class HomeDao {
 	}
 	
 	public List<HashMap> gugudanOne(int dan) {
-		return session.selectList("sql.dan");
+		return session.selectList("sql.dan", dan);
 	}
 	
 }
