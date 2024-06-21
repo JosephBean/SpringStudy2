@@ -65,7 +65,7 @@ const DATA = () => {
 	
 			<c:forEach var="j" begin="0" end="8">
 		    	<div class="col-sm-4">
-	      			<p class="text-bg-light">${list2[status.index + j].dan} * ${list2[status.index + j].su}</p>
+	      			<p class="text-bg-light">${list2[status.index + j].dan} * ${list2[status.index + j].su} = ${list2[status.index + j].dan * list2[status.index + j].su}</p>
 	    		</div>
 		  	</c:forEach>
 		  	
