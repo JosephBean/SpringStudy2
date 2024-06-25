@@ -22,7 +22,7 @@ a {text-decoration: none; color: #000; font-size: 1.5rem;}
 			<a href="/s1">스프링 URL</a>
 		</li>
 		<li>
-			<a href="/s2">파라메터 전달(MODEL, REDIRECT)</a>
+			<a href="/s2/">파라메터 전달(MODEL, REDIRECT)</a>
 		</li>
 	</ol>
 </div>

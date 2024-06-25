@@ -6,10 +6,10 @@
 <title>URL화면</title>
 </head>
 <body>
-	<a href=""></a>
+	<a href="/study/s1/data">호출</a>
 	<hr>
-	<form action="">
-		<button type="submit"></button>
+	<form action="/study/s1/data" method="post">
+		<button type="submit">호출</button>
 	</form>
 </body>
 </html>
