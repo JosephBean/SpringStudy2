@@ -17,7 +17,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class Study02 {
 
 	// 첫 화면 출력
-	@GetMapping("/")
+	@GetMapping("")
 	public String page1(Model model, HttpServletRequest req) {
 		String a = req.getParameter("a");
 //		model.addAttribute("a", a);

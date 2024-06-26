@@ -22,7 +22,13 @@ a {text-decoration: none; color: #000; font-size: 1.5rem;}
 			<a href="/s1">스프링 URL</a>
 		</li>
 		<li>
-			<a href="/s2/">파라메터 전달(MODEL, REDIRECT)</a>
+			<a href="/s2">파라메터 전달(MODEL, REDIRECT)</a>
+		</li>
+		<li>
+			<a href="/s3">JSTL 데이터 제어하기</a>
+		</li>
+		<li>
+			<a href="/s4">경로 변수 이용하여 페이지 출력하기</a>
 		</li>
 	</ol>
 </div>
