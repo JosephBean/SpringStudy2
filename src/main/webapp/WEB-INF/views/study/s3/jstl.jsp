@@ -33,7 +33,7 @@
 <hr>
 <!-- 반복문 -->
 <ul>
-<c:forEach var="row" begin="0" end="10" step="1" varStatus="s">
+<c:forEach var="row" begin="2" end="10" step="1" varStatus="s">
 	<li>${s.index} <span style="color: blue;">${s.count}</span> ${row}</li>
 </c:forEach>
 </ul>

@@ -9,7 +9,7 @@
 .text-center {text-align: center;}
 .text-start {text-align: left;}
 .body {display: flex; justify-content: center;}
-.in-box {width: 30vw;}
+.in-box {width: 40vw;}
 .in-box li:hover {background-color: #d3e3fd; cursor: pointer;}
 a {text-decoration: none; color: #000; font-size: 1.5rem;}
 </style>
