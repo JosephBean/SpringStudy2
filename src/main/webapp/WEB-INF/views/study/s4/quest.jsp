@@ -7,8 +7,9 @@
 <title>QUEST</title>
 </head>
 <body>
-	
-
+${map}
+<h1>${map.name}</h1>
+<h1>${map.age}</h1>
 
 </body>
 </html>
