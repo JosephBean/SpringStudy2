@@ -5,6 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Controller
 @RequestMapping("/s6")
 public class Study06 {
@@ -28,5 +31,6 @@ public class Study06 {
 	@GetMapping("")
 	public void url() {
 		System.out.println(service.run(1));
+		log.info("테스트");
 	}	
 }
