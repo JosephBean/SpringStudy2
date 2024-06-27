@@ -1,11 +1,6 @@
 package app.study;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
 import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,7 +31,7 @@ public class Study04 {
 			Model model) {
 		System.out.println(map);
 		model.addAttribute(map);
-		model.addAttribute("map",map);
+//		model.addAttribute("map", map);
 //		System.out.println( name );
 //		System.out.println( age );
 //		model.addAttribute("name", name);

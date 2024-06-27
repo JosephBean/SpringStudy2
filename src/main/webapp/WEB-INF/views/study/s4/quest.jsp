@@ -11,5 +11,10 @@ ${map}
 <h1>${map.name}</h1>
 <h1>${map.age}</h1>
 
+<hr>
+<h1>전달 받은 Map 객체 받아오기</h1>
+<h1>${name}</h1>
+<h1>${age}</h1>
+
 </body>
 </html>
