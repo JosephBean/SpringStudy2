@@ -1,5 +1,6 @@
 package app.study;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
@@ -30,7 +31,14 @@ public class Study04 {
 			@PathVariable Map map,
 			Model model) {
 		System.out.println(map);
+		System.out.println(map.getClass());
+		Map map2 = new HashMap<>();
+		map2.put("key1", 1);
+		Map map3 = new HashMap<>();
+		map3.put("key2", 2);
 		model.addAttribute(map);
+		model.addAttribute(map2);
+		model.addAttribute(map3);
 //		model.addAttribute("map", map);
 //		System.out.println( name );
 //		System.out.println( age );

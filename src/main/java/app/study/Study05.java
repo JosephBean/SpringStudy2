@@ -1,6 +1,8 @@
 package app.study;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -27,14 +29,40 @@ public class Study05 {
 	 * ? 			: 반복의 개념은 아니지만 0, 1 같은 둘 다 허용 매치 
 	 **********************************************************/
 
-	public void url1() {}
+	@GetMapping("/v/{value:[a-zA-Z]*}")
+	public void url1(@PathVariable String value) {
+		System.out.println("value1 : " + value);
+	}
 	
-	public void url2() {}
+	@GetMapping("/v/{value:[0-9]+}")
+	public void url2(@PathVariable int value) {
+		System.out.println("value2 : " + value);
+	}
 	
-	public void url3() {}
+	// page1 ~ page4
+	@GetMapping("/{value:[a-zA-Z]{4}[0-9]}")
+	public String url3(@PathVariable String value) {
+		System.out.println("value3 : " + value);
+		return "study/s4/" + value ;
+	}
 	
-	public void url4() {}
+	// q u e s t   << 받아야 한다.
+	@GetMapping("/{value:[q][u][e][s][t]}")
+	public String url4(@PathVariable String value) {
+		System.out.println("value4 : " + value);
+		return "study/s4/" + value;
+	}
 	
-	public void url5() {}
+	// 주민번호를 넣어서 정상이면 출력하세요.
+	// 년도(2) 	: [0-9]{2}
+	// 월(2) 	: 첫번째자리 [0-1] 두번째자리 [0-9]
+	// 일(2) 	: 첫번째자리 [0-3] 두번째자리 [0-9]
+	// 성별		: [1-4]
+	// 구분(6)	: [0-9]{6}
+	// 테스트 주민번호 : 00 12 31 4 123456  (0012314123456)
+	@GetMapping("/{value:[0-9]{2}[0-1][0-9][0-3][0-9][1-4][0-9]{6}}")
+	public void url5(@PathVariable String value) {
+		System.out.println("value5 : " + value);
+	}
 	
 }

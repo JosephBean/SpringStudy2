@@ -16,5 +16,15 @@ ${map}
 <h1>${name}</h1>
 <h1>${age}</h1>
 
+<hr>
+<p>AbstractMap : ${abstractMap}</p>
+<p>EnumMap : ${enumMap}</p>
+<p>HashMap : ${hashMap}</p>
+<p>IdentityHashMap : ${identityHashMap}</p>
+<p>LinkedHashMap : ${linkedHashMap}</p>
+<p>TreeMap : ${treeMap}</p>
+<p>WeakHashMap : ${weakHashMap}</p>
+
+
 </body>
 </html>
