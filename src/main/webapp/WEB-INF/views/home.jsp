@@ -34,7 +34,7 @@ a {text-decoration: none; color: #000; font-size: 1.5rem;}
 			<a href="/s5">경로 변수에 조건를 넣어서 데이터 가져오기</a>
 		</li>
 		<li>
-			<a href="/s6">스프링 Service 기능 나누기</a>
+			<a href="/s6/2/2/1/1">스프링 Service 기능 나누기</a>
 		</li>
 	</ol>
 </div>

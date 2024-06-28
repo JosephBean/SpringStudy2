@@ -1,8 +1,12 @@
 package app.study;
 
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.extern.slf4j.Slf4j;
@@ -28,9 +32,27 @@ public class Study06 {
 	 ******************************************************************************/
 	
 	// Service에서 연산 호출하여 결과값 받아 오기
-	@GetMapping("")
+	@GetMapping("/{type:[1-4]}/{a:[0-9]+}/{b:[0-9]+}/{e:[0-9]+}")
+	public void url(
+			@PathVariable int type, 
+			@PathVariable int a, 
+			@PathVariable int b, 
+			@PathVariable int e
+			) {
+		int value = service.run(type, a, b);
+		log.info("run() : {} {}", value, (e == value));
+	}
+	
+	@Autowired
+	Study06Dao study06dao;
+	
+	@GetMapping("/findList")
 	public void url() {
-		System.out.println(service.run(1));
-		log.info("테스트");
-	}	
+		List<Map> list = study06dao.findList();
+		log.info("temp1 LIST SIZE : {}", list.size());
+		for(Map map : list) {
+			log.info("ROW : {}", map);
+		}
+	}
+	
 }
