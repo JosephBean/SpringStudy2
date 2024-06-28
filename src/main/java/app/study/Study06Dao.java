@@ -13,8 +13,8 @@ public class Study06Dao {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	public List<Map> findList() {
-		return sqlSession.selectList("temp1.findList");
+	public List<Map> findList(Object accept) {
+		return sqlSession.selectList("temp1.findList", accept);
 	}
 
 }

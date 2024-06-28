@@ -46,12 +46,20 @@ public class Study06 {
 	@Autowired
 	Study06Dao study06dao;
 	
-	@GetMapping("/findList")
-	public void url() {
-		List<Map> list = study06dao.findList();
+	@GetMapping(value = {"/findList/{accept:[0-1]}", "/findList"})
+	public void url(@PathVariable(required = false) Object accept) {
+		log.info("accept : {}", accept);
+		List<Map> list = study06dao.findList(accept);
 		log.info("temp1 LIST SIZE : {}", list.size());
 		for(Map map : list) {
-			log.info("ROW : {}", map);
+//			int check = 0;
+//			if((boolean) map.get("accept")) {
+//				// 참
+//				check = 1;
+//			}
+//			if(accept == check) {
+				log.info("ROW : {}", map);
+//			}
 		}
 	}
 	
