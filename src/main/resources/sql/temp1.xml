@@ -14,4 +14,35 @@
   	</if>
   </select>
   
+  <select id="findOne" parameterType="Integer" resultType="HashMap">
+  	SELECT * FROM temp1 WHERE no = #{no} 
+  </select>
+  
+  <update id="edit" parameterType="HashMap">
+  	UPDATE temp1 SET
+  		title = #{title},
+  		content = #{content}
+  	WHERE no = #{no}
+  </update>
+  
+  <update id="editAccept" parameterType="HashMap">
+  	UPDATE temp1 SET
+  		accept = #{accept}
+  	WHERE no = #{no}
+  </update>
+  
+  <insert id="save" parameterType="HashMap">
+  	INSERT INTO temp1 
+  		(title, content)
+  	VALUE
+  		(#{title}, #{content})
+  	<selectKey keyProperty="no" order="AFTER" resultType="Integer">
+  		SELECT LAST_INSERT_ID() as no
+  	</selectKey>
+  </insert>
+  
+  <select id="findNo" resultType="Integer">
+  	SELECT LAST_INSERT_ID() as no
+  </select>
+  
 </mapper>
